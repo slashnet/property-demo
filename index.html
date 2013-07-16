@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>801 Meridian Avenue Unit V</title>
+
+<!-- Scripts -->
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jqMobile.min.js" type="text/javascript"></script>
+	<script src="js/iscroll.js" type="application/x-javascript" charset="utf-8"></script>
+    
+<!-- Styles -->
+    <link rel="stylesheet" href="css/jqMobile.css"/>
+    
+    <!-- iPhone -->
+    <link rel="stylesheet" media="all and (min-device-width: 320px) and (max-device-width: 480px)" href="css/iphone.css">
+    
+    <!-- iPad -->
+    <link rel="stylesheet" media="all and (min-device-width: 481px) and (max-device-width: 1024px)" href="css/ipad.css">
+    
+    <!-- Desktop -->
+    <link rel="stylesheet" media="all and (min-device-width: 1025px)" href="css/ipad.css">
+<!-- jQuery -->
+	<script>
+		$(function(){
+			
+			$('.showmenu').bind('click',function(){
+				$('.ui-page-active').animate({
+					left:"-220px"
+				});
+				$('.showmenu').hide();
+				$('.hidemenu').show();
+			});
+			
+			$('.hidemenu').bind('click',function(){
+				$('.ui-page-active').animate({
+					left:"0px"
+				});
+				$('.hidemenu').hide();
+				$('.showmenu').show();
+			});
+			
+			$('#splashpage img').click(function(){
+				$('#splashpage').hide();
+			});
+			
+			
+		});
+		function hidemenubutton(){
+				$('.ui-page-active').css({
+					left:"0px"
+				});
+				$('.hidemenu').hide();
+				$('.showmenu').show();
+			};
+	</script>
+</head>
+
+<body>
+	<div id="splashpage">
+    	<img src="images/splash.jpg" border="0" style="height:70%;"/>
+    </div>
+
+	<div id="hiddennav">
+    	<div>
+    	<div id="menushadow"></div>
+        <ul class="ui-listview" data-theme="c">
+            <li class="ui-li ui-li-divider ui-btn ui-bar-b">Main Navigation</li>
+            <li class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#home" class="ui-link-inherit" onClick="javascript:hidemenubutton();setTimeout(function () {imagegallery.refresh();}, 100);">Home</a></div></div></li>
+            <li class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#property" class="ui-link-inherit" onClick="javascript:hidemenubutton();">Property Details</a></div></div></li>
+            <li class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#floor" class="ui-link-inherit" onClick="javascript:hidemenubutton();">Floor Plan</a></div></div></li>
+            <li class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#schools" class="ui-link-inherit" onClick="javascript:hidemenubutton();">Schools</a></div></div></li>
+            <li class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#realtor" class="ui-link-inherit" onClick="javascript:hidemenubutton();">Realtor</a></div></div></li>
+    	</ul>
+        <div class="tagged">
+        	Powered by:<br />
+            <img src="images/logo.png" width="80" height="80"/>            
+        </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+                       var menuscroll;
+						function loaded() {
+							menuscroll = new iScroll('hiddennav',{checkDOMChanges: false, hScrollbar: false, vScrollbar: false });
+						}
+						document.addEventListener('DOMContentLoaded', loaded, false);
+						setTimeout(function () {menuscroll.refresh();}, 100);
+                    </script>
+
+<!-- Home Page -->
+	<div data-role="page" class="type-home" id="home">
+      	<div data-role="header" data-theme="a">
+            <h1>801 Meridian Avenue Unit V</h1>
+            <a href="#" class="ui-btn-right showmenu" data-theme="b">Menu</a>
+            <a href="#" class="ui-btn-right hidemenu" style="display:none;" data-theme="b">Hide Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            
+            <div class="content-primary">
+            	<div id="scrollwrapper">
+            	<div id="imagegallery" class="scroller">
+                        <ul>
+                            <li><img src="images/property/01.jpeg"/></li>
+							<li><img src="images/property/02.jpeg"/></li>
+                            <li><img src="images/property/03.jpeg"/></li>
+                            <li><img src="images/property/04.jpeg"/></li>
+                            <li><img src="images/property/05.jpeg"/></li>
+                            <li><img src="images/property/06.jpeg"/></li>
+                            <li><img src="images/property/07.jpeg"/></li>
+                            <li><img src="images/property/08.jpeg"/></li>
+                            <li><img src="images/property/09.jpeg"/></li>
+                            <li><img src="images/property/10.jpeg"/></li>
+                            <li><img src="images/property/11.jpeg"/></li>
+                            <li><img src="images/property/12.jpeg"/></li>
+                            <li><img src="images/property/13.jpeg"/></li>
+                        </ul>
+                    </div>
+                    </div>
+                    
+                    <script type="text/javascript">
+                       var imagegallery;
+						function loaded() {
+							imagegallery = new iScroll('scrollwrapper',{snap:'li',momentum:false,checkDOMChanges: false, hScrollbar: false, vScrollbar: false });
+						}
+						document.addEventListener('DOMContentLoaded', loaded, false);
+						setTimeout(function () {imagegallery.refresh();}, 100);
+                    </script>
+
+                <div class="cost">
+                	$799,000
+                </div>
+                
+            </div>
+            
+            <div class="content-secondary">
+            	<!--<div id="jqm-homeheader" style="margin-bottom:20px;">
+                    <h1 id="jqm-logo"><img src="images/mikebelllogo.jpg" /></h1>
+                </div>-->
+                
+            	<ul class="featured">
+                	<li><span class="number">4</span><br />Bedroom</li>
+                    <li><span class="number">3.5</span><br />Bathrooms</li>
+                    <li><span class="number">1,866</span><br />Sq Ft</li>
+                    <li><span class="number">$428</span><br />per Sq Ft</li>
+                </ul>
+                
+                <!--<div id="featuredtextphone">
+                	<h3>Property Features</h3>
+                    <p>The 1906 Sadler House is one of the most attractive Craftsman bungalows to be seen in this neighborhood.  Its most outstanding feature is its concrete and cobblestone foundation and Arroyo stone/clinker brick porch piers.  With almost all of its original details, this home is one of the best examples of this style on the street.
+					</p>
+                    <p>
+From the front door with its original hardware to the built-in bookcases, Grueby Faience tiled fireplace and pendant light fixtures hanging from the living room box beams, this house is filled with history. Pocket doors to the hall and to the dining room, built-in sideboard, wainscoting, and an original gas/electric wall sconce are only a few details. Large 160 square foot kitchen features original cabinets with large built-ins and a tile floor.  A laundry area/room is adjacent to the kitchen. Upstairs is 1,346 square feet of finished space featuring original board and batten details throughout. Other details include leaded glass windows in the dining room, picture moulding, and a claw-foot tub in the main bathroom, embossed plaster on kitchen walls skylights in the kitchen and second floor.
+					</p>
+                    <p>
+City Occupancy clearance, termite clearance, and home warranty will be provided.  Apply for Mills Act property tax savings!
+                    </p>
+                </div>
+                
+                <div id="featuredtext">
+                	<div>
+                	<h3>Property Features</h3>
+                    <p>The 1906 Sadler House is one of the most attractive Craftsman bungalows to be seen in this neighborhood.  Its most outstanding feature is its concrete and cobblestone foundation and Arroyo stone/clinker brick porch piers.  With almost all of its original details, this home is one of the best examples of this style on the street.
+					</p>
+                    <p>
+From the front door with its original hardware to the built-in bookcases, Grueby Faience tiled fireplace and pendant light fixtures hanging from the living room box beams, this house is filled with history. Pocket doors to the hall and to the dining room, built-in sideboard, wainscoting, and an original gas/electric wall sconce are only a few details. Large 160 square foot kitchen features original cabinets with large built-ins and a tile floor.  A laundry area/room is adjacent to the kitchen. Upstairs is 1,346 square feet of finished space featuring original board and batten details throughout. Other details include leaded glass windows in the dining room, picture moulding, and a claw-foot tub in the main bathroom, embossed plaster on kitchen walls skylights in the kitchen and second floor.
+					</p>
+                    <p>
+City Occupancy clearance, termite clearance, and home warranty will be provided.  Apply for Mills Act property tax savings!
+                    </p>
+                    </div>
+                </div>
+                
+                <script type="text/javascript">
+                       var featuretext;
+						function loaded() {
+							featuretext = new iScroll('featuredtext',{checkDOMChanges: false, hScrollbar: false, vScrollbar: false });
+						}
+						document.addEventListener('DOMContentLoaded', loaded, false);
+						setTimeout(function () {featuretext.refresh();}, 100);
+                    </script>-->
+            </div>
+        </div>
+              
+    </div>
+
+<!-- Property Details -->
+	<div data-role="page" class="type-home" id="property">
+        <div data-role="header" data-theme="a">
+            <h1>801 Meridian Avenue Unit V</h1>
+            <a href="#" class="ui-btn-right showmenu" data-theme="b">Menu</a>
+            <a href="#" class="ui-btn-right hidemenu" style="display:none;" data-theme="b">Hide Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            
+            <div class="content-primary">
+                <h3>Property Features</h3>
+                	<p>
+                        Striking Craftsman style townhome in the incredibly convenient location of Mission Meridian Village, in the heart of the Mission West District. This New Urbanism village was designed by renowned architects Moule &amp; Polyzoides, and this is an end unit, so there is a lot of light with windows on three sides. Details include shingle siding, wood casement and double-hung windows, dual zone AC, extra deep bath tubs, oil rubbed bronze details, stainless steel appliances, skylight, fireplace in the living room, and wired for alarm, high-speed internet and cable services.  Third floor bedroom partition wall can be easily removed (currently used as two bedrooms).
+                   	</p>
+                    <p> 
+                        The Metro Gold Line Mission Station is very close, the weekly Thursday Farmers Market, great restaurants, coffee shops, and community events. This is a mixed-use village with its own retail stores including a wonderful bakery, exercise studio and a bridal store.
+                    </p>
+                    <p>    
+                        South Pasadena is a friendly community, and its award winning schools have some of the highest API's in the state of California. Elementary: Arroyo Vista (API 932) Middle: South Pasadena Middle School (API 912) High School: South Pasadena High School (API 887). Your chance to live in beautiful South Pasadena is here!
+            		</p>
+            </div>
+            
+            <div class="content-secondary">
+                <!--<div id="jqm-homeheader">
+                    <h1 id="jqm-logo"><img src="images/mikebelllogo.jpg" /></h1>
+                </div>-->
+                
+                <ul class="featured">
+                	<li><span class="number">4</span><br />Bedroom</li>
+                    <li><span class="number">3.5</span><br />Bathrooms</li>
+                    <li><span class="number">1,866</span><br />Sq Ft</li>
+                    <li><span class="number">$428</span><br />per Sq Ft</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+<!-- Floor Plan -->
+	<div data-role="page" class="type-home" id="floor">
+        <div data-role="header" data-theme="a">
+            <h1>801 Meridian Avenue Unit V</h1>
+            <a href="#" class="ui-btn-right showmenu" data-theme="b">Menu</a>
+            <a href="#" class="ui-btn-right hidemenu" style="display:none;" data-theme="b">Hide Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            
+            <div class="content-primary">
+                <h3>Floor Plan</h3>
+                <img src="images/floorplan.jpg" width="100%" border="0" />
+            </div>
+            
+            <div class="content-secondary">
+                <!--<div id="jqm-homeheader">
+                    <h1 id="jqm-logo"><img src="images/mikebelllogo.jpg" /></h1>
+                </div>-->
+                
+                <ul class="featured">
+                	<li><span class="number">4</span><br />Bedroom</li>
+                    <li><span class="number">3.5</span><br />Bathrooms</li>
+                    <li><span class="number">1,866</span><br />Sq Ft</li>
+                    <li><span class="number">$428</span><br />per Sq Ft</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+<!-- Schools -->
+	<div data-role="page" class="type-home" id="schools">
+        <div data-role="header" data-theme="a">
+            <h1>801 Meridian Avenue Unit V</h1>
+            <a href="#" class="ui-btn-right showmenu" data-theme="b">Menu</a>
+            <a href="#" class="ui-btn-right hidemenu" style="display:none;" data-theme="b">Hide Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            
+            <div class="content-primary">
+                <h3>Local Schools</h3>
+                <img src="images/schools.jpg" width="100%" border="0" />
+            </div>
+            
+            <div class="content-secondary">
+                <!--<div id="jqm-homeheader">
+                    <h1 id="jqm-logo"><img src="images/mikebelllogo.jpg" /></h1>
+                </div>-->
+                
+                <ul class="featured">
+                	<li><span class="number">4</span><br />Bedroom</li>
+                    <li><span class="number">3.5</span><br />Bathrooms</li>
+                    <li><span class="number">1,866</span><br />Sq Ft</li>
+                    <li><span class="number">$428</span><br />per Sq Ft</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+<!-- Realtor -->
+	<div data-role="page" class="type-home" id="realtor">
+        <div data-role="header" data-theme="a">
+            <h1>801 Meridian Avenue Unit V</h1>
+            <a href="#" class="ui-btn-right showmenu" data-theme="b">Menu</a>
+            <a href="#" class="ui-btn-right hidemenu" style="display:none;" data-theme="b">Hide Menu</a>
+        </div><!-- /header -->
+        <div data-role="content">
+            
+            <div class="content-primary">
+                <h3>Realtor</h3>
+                <div class="agent" style="width:40%; float:left;">
+                	<p>Exclusively represented by</p><br />
+                    <img src="images/mike-bell.jpg"><br />
+                    <p>Michael Bell, GRI</p>
+                    <p>Broker Lic. 01164731</p>
+                    <p>Direct: 626.796.4100</p>
+                </div>
+                <div class="company" style="width:50%; float:left;">
+                    <h4><span>Keller Williams</span></h4>
+                    <img src="images/kw-smlogo.gif">
+                    <p>445 S. Fair Oaks Avenue | Pasadena, CA 91105</p>
+                    <p><a href="http://www.themikebellteam.com" target="_blank">www.TheMikeBellTeam.com</a></p>
+                </div>
+            </div>
+            
+            <div class="content-secondary">
+                <div id="jqm-homeheader">
+                    <h1 id="jqm-logo"><img src="images/mikebelllogo.jpg" /></h1>
+                </div>
+                
+                <ul class="featured">
+                	<li><span class="number">4</span><br />Bedroom</li>
+                    <li><span class="number">3.5</span><br />Bathrooms</li>
+                    <li><span class="number">1,866</span><br />Sq Ft</li>
+                    <li><span class="number">$428</span><br />per Sq Ft</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
