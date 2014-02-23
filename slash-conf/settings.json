@@ -1,7 +1,7 @@
 {
   "author":      "Chris Jacobs",
-  "description": "Demo for Real Estate.",
+  "description": "Real Estate demo.",
   "name":        "Property Demo",
   "url":         "property/",
-  "repo_url":    "boomzang/property"
+  "repo_url":    "slashnet/property-demo"
 }
